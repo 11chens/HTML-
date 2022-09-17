@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 背景图 */
+body{
+    background-color: #fff;
+}
+/* 父元素下移 留出最上方蓝色条带 */
+.header{
+    margin-top: 15px;
+    height: 105px;
+    position: relative;
+}
+.header>a>img{
+    position: absolute;
+    left: 175px;
+    top: 54px;
+}
+/* 语言栏 */
+.language{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(17,17,17);
+}
+/* 父右浮动 */
+.language>ul{
+    float: right;
+    margin-right: 138px;
+}
+/* 子左浮动 */
+.language>ul>li{
+    width: 80px;
+    height: 35px;
+    background-color: #fff;
+    float: left;
+    margin-left: 5px;
+    list-style: none;
+}
+.language>ul>li:nth-of-type(1){
+    background: url(../img/lag.png);
+}
+.language>ul>li:nth-of-type(1):hover{
+    background: url(../img/lag.png) no-repeat -80px 0;
+}
+.language>ul>li:nth-of-type(2){
+    background: url(../img/lag.png) no-repeat 0 -34px;
+}
+.language>ul>li:nth-of-type(2):hover{
+    background: url(../img/lag.png) no-repeat -80px -34px;
+}
+.language>ul>li:nth-of-type(3){
+    background: url(../img/lag.png) no-repeat 0 -68px;
+}
+.language>ul>li:nth-of-type(3):hover{
+    background: url(../img/lag.png) no-repeat -80px -68px;
+}
+.language>ul>li:nth-of-type(4){
+    background: url(../img/lag.png) no-repeat 0 -102px;
+}
+.language>ul>li:nth-of-type(4):hover{
+    background: url(../img/lag.png) no-repeat -80px -102px;
+}
+/* 天气 */
+.language>ul>li:nth-of-type(5){
+    /* 温度与图片之间间隔 */
+    padding-left: 30px;
+    background-color: #fff;
+    font-size: 14px;
+    /* 语言栏高度居中 */
+    line-height: 35px;
+    background:url(../img/b7.png) no-repeat 3px 0;
+    background-color:  rgb(0,138,206); 
+}
+
+
+.nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(0,43,73);
+}
+/* 导航栏中ul */
+.nav>ul{
+    margin-left: 247px;
+    height: 70px;
+}
+/* 导航栏中a */
+a{
+    text-decoration: none;
+    color: white;
+}
+/* 导航栏中每个li */
+.nav>ul>li{
+    padding: 0 15px;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    list-style: none; 
+}
+
+/* massage */
+.massage{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.massage>h1{
+    padding:15px ;
+    background-color: rgb(0,98,165);
+    color: #fff;
+    font-size: 18px;
+}
+.massage>ul{
+    color: rgb(102,102,102);
+    font-size: 16px;
+    list-style: none;
+}
+.massage>ul>li{
+    margin: 10px;
+    padding: 10px;
+    font-weight: 900;
+    border-bottom: 1px  dotted rgb(203,203,203);
+}
+.massage>ul>li:hover{
+    background-color: rgb(245,245,245);
+    color: rgb(51,51,51);
+}
+.massage>ul>li>span{
+    color: rgb(86,86,86);
+    font-size: 12px;
+}
+.massage>ul>li>span:hover{
+    color: rgb(51,51,51);
+}
+
+/* query */
+.query{
+    color: rgb(80,80,80);
+    text-align: center;
+    margin: 25px;
+}
+#go{
+    width: 25px;
+    height: 12px;
+}
+#page1{
+    color: rgb(51,51,51);
+    font-weight: 600;
+}
+#page2{
+    color: rgb(80,80,80);
+    font-weight: 600;
+}
+.query>p>a{
+    color: rgb(51,51,51);
+}
+.query>p>a:hover{
+    color: rgb(0,138,206);
+}
+#page1:hover{
+    color: rgb(0,138,206);
+}
+#goo:hover{
+    color: rgb(0,138,206);
+}
+/******* foot *******/
+.foot{
+    background-color: #282828;
+    width: 100%;
+    height: 270px;
+    /* 父元素overflow清除浮动 */
+    overflow: hidden;
+    margin-top: 33px;
+}
+.foot>.content
+{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 50%;
+    height: 50%;
+    /* background-color: pink; */
+    display:  flex;
+    justify-content:start;
+}
+.foot>.content>.footLeft
+{
+    float: left;
+    width: 340px;
+    height: 130px;
+    /* background-color: rgb(225, 243, 64); */
+    padding: 5px 28px;
+    border-right: 1px solid rgb(66,66,66);
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 47px;
+}
+
+.foot>.content>.footRight
+{
+    float: left;
+    width: 240px;
+    height: 200px;
+    /* background-color: rgb(170, 179, 250); */
+}
+.foot>.Bottom
+{
+    margin: 0 auto;
+    width: 80%;
+    height: 86px;
+    /* background-color: rgb(116, 180, 88); */
+}
+
+/* footLeft */
+
+.foot>.content>.footLeft>h1{
+    color: white;
+    font-size: 25px;
+}
+.foot>.content>.footLeft>span{
+    color: white;
+    font-size: 14px;
+}
+
+/* footRight */
+.footRight>.title>h3{
+    color: rgb(51,137,215);
+    font-size: 21px;
+    margin-left: 17px;
+    margin-bottom: 6px;
+}
+.footRight>.content{
+    position: relative;
+}
+.footRight>.content>ul>li{
+    color: rgb(165,165,165);
+    width: 170px;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    padding-left: 60px;
+    background: url(../img/arrow_bottom.png) no-repeat 12px 8px;
+
+}
+.footRight>.content>img{
+    position: absolute;
+    left: 28px;
+    top: 1px;
+}
+
+/* bottom */
+.Bottom>.word{
+    height: 64px;
+    margin-top: 30px;
+    padding-top: 10px;
+    /* line-height 效果与padding相同 */
+    line-height: 44px;
+    text-align: center;
+    color: rgb(153,153,153);
+    border-top: 1px solid rgb(66,66,66);
+}
+.Bottom>.word>.ww{
+    color: white;
+}
+.Bottom>.word>.ww:hover{
+    color: rgb(153,153,153);
+}
+
+

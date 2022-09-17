@@ -1,0 +1,802 @@
+/* 要想整体移动用margin 
+要让ul中每个li移动用padding（元素撑大）
+或者元素内部间距调整用padding
+调内容和border之间的距离也用padding
+单独的一个li前+jpg也用padding
+*/
+
+/***********/
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 背景图 */
+body{
+    background: url(../img/bg.jpg);
+}
+/* 父元素下移 留出最上方蓝色条带 */
+.header{
+    margin-top: 15px;
+    height: 445px;
+}
+/* 语言栏 */
+.language{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(17,17,17);
+}
+/* 父右浮动 */
+.language>ul{
+    float: right;
+    margin-right: 80px;
+}
+/* 子左浮动 */
+.language>ul>li{
+    width: 80px;
+    height: 35px;
+    background-color: #fff;
+    float: left;
+    margin-left: 5px;
+    list-style: none;
+}
+.language>ul>li:nth-of-type(1){
+    background: url(../img/lag.png);
+}
+.language>ul>li:nth-of-type(1):hover{
+    background: url(../img/lag.png) no-repeat -80px 0;
+}
+.language>ul>li:nth-of-type(2){
+    background: url(../img/lag.png) no-repeat 0 -34px;
+}
+.language>ul>li:nth-of-type(2):hover{
+    background: url(../img/lag.png) no-repeat -80px -34px;
+}
+.language>ul>li:nth-of-type(3){
+    background: url(../img/lag.png) no-repeat 0 -68px;
+}
+.language>ul>li:nth-of-type(3):hover{
+    background: url(../img/lag.png) no-repeat -80px -68px;
+}
+.language>ul>li:nth-of-type(4){
+    background: url(../img/lag.png) no-repeat 0 -102px;
+}
+.language>ul>li:nth-of-type(4):hover{
+    background: url(../img/lag.png) no-repeat -80px -102px;
+}
+/* 天气 */
+.language>ul>li:nth-of-type(5){
+    /* 温度与图片之间间隔 */
+    padding-left: 30px;
+    background-color: #fff;
+    font-size: 14px;
+    /* 语言栏高度居中 */
+    line-height: 35px;
+    background:url(../img/b7.png) no-repeat 3px 0;
+    background-color:  rgb(0,138,206); 
+}
+
+
+.nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(0,43,73);
+}
+/* 导航栏中ul */
+.nav>ul{
+    margin-left: 310px;
+    height: 70px;
+}
+/* 导航栏中a */
+a{
+    text-decoration: none;
+    color: white;
+}
+/* 导航栏中每个li */
+.nav>ul>li{
+    padding: 0 15px;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    list-style: none; 
+}
+/* 厦门旅游网图片 */
+.header>img{
+    float: left;
+    margin-left: 85px;
+}
+
+
+/* bannner图 */
+.banner{
+    width: 100%;
+    height: 340px;
+    background-color: red;
+    background:url(../img/bpic.jpg) ;
+    /* 为了正常展开图片设置尺寸 */
+    background-size: 100% 340px;
+    overflow: hidden;
+    /* 边框重合导致子动父也动 +overflow: hidden; */
+}
+.banner>p{
+    font-size: 56px;
+    color: white;
+    margin-left: 750px;
+    margin-top: 35px;
+}
+
+/* 版心 */
+.continer{
+    width: 90%;
+    /* height: 600px; */
+   
+    /* background-color: pink; */
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.continer>.top1{
+    width: 100%;
+    height: 320px;
+    /* background-color: red; */
+}
+
+.top1>.left{
+    width: 220px;
+    height: 100%;
+    background-color:rgb(0,65,108);
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.top1>.center{
+    width: 635px;
+    height: 100%;
+    background-color: rgb(0,65,108);
+    float: left;
+    margin: 0 10px;
+}
+.top1>.right{
+    width: 250px;
+    height: 100%;
+    /* background-color: gray; */
+    float: left;
+    margin-left: 10px;
+}
+.top1>.left>ul>h2{
+    color: #64abf1;
+    font-size: 20px;
+    padding: 15px 0;
+    border-bottom: 2px solid rgb(33,99,142); 
+}
+.top1>.left>ul{
+    list-style: none;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.top1>.left>ul>li{
+    color: white;
+    line-height: 40px;
+    padding-left: 15px;
+    background: url(../img/ql_dot.png) no-repeat 0px 17px;
+}
+.top1>.left>ul>li:hover{
+    color: #64abf1;
+}
+
+/* center */
+
+.top1>.center{
+    background: url(../img/y1_.jpeg);
+    /* 图片展开有问题，需要调整为center尺寸
+    才能正常展开 */
+    background-size:  635px 100%;
+}
+
+/* right */
+
+.top1>.right>.news{
+    width: 100%;
+    height: 35px;
+    /* background-color: rgb(139, 231, 141); */
+    border-bottom: 3px solid #add5f2;
+    line-height: 35px;
+}
+.top1>.right>.news>.news_left{
+    font-weight: 900;
+    padding-bottom: 7px;
+    box-sizing: border-box;
+    border-bottom: 4px solid rgb(29,122,174);
+}
+.top1>.right>.news>.news_right{
+    float: right;
+    font-size: 14px;
+    font-style: italic;
+}
+.top1>.right>.news>.news_right>a:hover{
+    color: #4c86d0;
+}
+.top1>.right>ul{
+    width: 100%;
+    height: 270px;
+    background-color: white;
+    margin-top: 15px;
+    list-style: none;
+    padding: 0 13px;
+     /* 共头高 一起动 */
+    overflow: hidden;
+     /* 怪异模式：不用标准公式+padding */
+    box-sizing: border-box;
+}
+.top1>.right>ul>li:nth-of-type(1){
+    margin-top: 20px;
+}
+.top1>.right>ul>li{
+    font-size: 14px;
+    color: rgb(94, 90, 90);
+     /* 行间距 */
+    line-height: 33px;
+    background-color: rgb(114, 112, 112);
+    /* 加背景颜色后发现没有地方加序号标记 */
+    padding-left:8px;
+    background: url(../img/sm_arrow.png) no-repeat 0 13px;
+}
+.top1>.right>ul>li:hover{
+    /* 加下划线 */
+    text-decoration: underline;
+    color: #4c86d0;
+}
+.top2{
+    margin-top: 15px;
+    width: 100%;
+    height: 430px;
+    /* background-color: white; */
+}
+.top2>.top2Left{
+    height: 430px;
+    width: 860px;
+    background-color: white;
+    float: left;
+}
+
+.top2Left>.top{
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: #28609f;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.top2Left>.top>.item{
+    background-color: yellow;
+    border-radius: 3px;
+    /* 每个元素被撑大左右20px */
+    padding:10px;
+    /* 每个元素之间间隔20px*/
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(51,51,51);
+}
+/* 第一个元素间隔更大 */
+.top2Left>.top>span:nth-of-type(2){
+    margin-left: 70px;
+    background-color: rgb(255,223,94) ;
+}
+.top2Left>.top>.item:hover{
+    color: white;
+    background-color: #15385d;
+}
+.top2Left>.top>.title{
+    font-size: 18px;
+    color: white;
+    font-weight: 800;
+    /* 每一个span margin都是20px=父padding */
+    /* margin-left: 20px; */
+}
+.top2Left>.top>span:nth-of-type(3){
+    background-color: rgb(96,189,254); ;
+}
+.top2Left>.top>span:nth-of-type(4){
+    background-color: rgb(156,226,128); ;
+}
+.top2Left>.top>span:nth-of-type(5){
+    background-color: rgb(69,210,193); ;
+}
+.top2Left>.top>span:nth-of-type(6){
+    background-color: rgb(254,167,202); ;
+}
+.top2Left>.top>.more{
+    margin-left: 40px;
+    font-style: italic;
+}
+.top2Left>.top>.more>a:hover{
+    color:rgb(164,213,240);
+}
+
+
+/*********bottomLeft********/
+.top2Left>.bottom>.bottomLeft{
+    width: 285px;
+    height: 370px;
+    background-color: rgb(133, 81, 81);
+    /* 子绝父相 */
+    position: relative;
+    float: left;
+}
+.top2Left>.bottom>.bottomLeft>.word{
+    width: 100%;
+    height: 135px;
+    background-color: rgb(209,231,244);
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+.top2Left>.bottom>.bottomLeft>.word>.title{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: rgb(51,51,51);
+}
+.top2Left>.bottom>.bottomLeft>.word>.title>em{
+    font-size: 30px;
+    color: rgb(0,97,164);
+}
+/* 两个p不会同时生效，上面优先级更高 */
+.top2Left>.bottom>.bottomLeft>.word>p{
+    font-size: 12px;
+    color: rgb(51,51,51);
+}
+.top2Left>.bottom>.bottomLeft>.word>p:hover{
+    color: rgb(51,137,215);
+}
+.top2Left>.bottom>.bottomLeft>.pic{
+    width: 100%;
+    height: 236px;
+    background-color: #fff;
+    background: url(../img/kd.jpeg);
+}
+/* 箭头子绝父相 */
+#jt{
+    position:absolute;
+    /* 定位是left */
+    left: 200px;
+}
+
+/*********bottomRight********/
+.bottom>.bottomRight{
+    width: 540px;
+    height: 350px;
+    /* background-color: rgb(216, 138, 138); */
+    float: left; 
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.bottom>.bottomRight>.item{
+    width: 100%;
+    /* 高要增不然要乱 */
+    height: 108px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom:1px dashed gray  ;
+}
+.bottomRight>.item>img{
+    width: 160px;
+    height: 100px;
+    float: left;
+}
+.bottomRight>.item>.itemRight>h3{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 182px;
+    color: rgb(51,51,51);
+}
+.bottomRight>.item>.itemRight>h3:hover{
+    color: rgb(0,97,164);
+}
+h3>em{
+    font-size: 30px;
+    color: rgb(0,97,164);
+}
+
+.bottomRight>.item>.itemRight>p{
+    font-size: 12px;
+    color: rgb(51,51,51);
+    margin-left: 188px;
+}
+.bottomRight>.item>.itemRight>p:hover{
+    color: rgb(51,137,215);
+}
+
+
+/******* top2Right ******/
+.top2>.top2Right{
+    margin-left: 25px;
+    height: 430px;
+    width: 250px;
+    float: left;
+    /* background-color: rgb(108, 108, 19); */
+}
+.top2>.top2Right>.item{
+    background-color: #fff;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 20px;
+}
+.top2>.top2Right>.item:nth-of-type(1)
+{
+    background: url(../img/45-2.jpg);
+    background-size: 100% 100%;
+}
+.top2>.top2Right>.item:nth-of-type(2)
+{
+    background: url(../img/honse.jpg);
+    background-size: 100% 100%;
+}
+.top2>.top2Right>.item:nth-of-type(3)
+{
+    background: url(../img/wx3.jpg);
+    background-size: 100% 100%;
+}
+
+
+
+.top3{
+    /* background-color: rgb(169, 140, 140); */
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+.top3>.title{
+    /* background-color: rgb(225, 225, 149); */
+    width: 100%;
+    height: 60px;
+}
+.top3>.title>h1{
+    /* color: rgb(69,69,69); */
+    font-weight: 800;
+    text-indent: 44%;
+    line-height: 60px;
+    background-color: #fff;
+    background: url(../img/tit-line.png) no-repeat 384px 30px;
+}
+.top3>.bottom{
+    /* background-color: rgb(236, 184, 184); */
+    width: 100%;
+    height: 365px;
+    /* 让item弹性居中铺满白色bottom */
+    display: flex;
+    justify-content: space-between;
+}
+.top3>.bottom>.item{
+    margin-top: 20px;
+    width: 213px;
+    height:350px ;
+    background-color: white;
+    float: left;
+    position: relative;
+    border: 1px solid grey;
+}
+.top3>.bottom>.item>ul>li{
+    /* 排满后横向排列 */
+    float: left;
+    list-style: none;
+    margin: 5px 0 0 10px;
+    width: 84px;
+    padding-left: 12px;
+    background: url(../img/tg_dot.png) no-repeat 0px 10px;
+}
+.item>ul>li>a{
+    color: rgb(69,69,69);
+    font-size: 12px;
+}
+.item>ul>li>a:hover{
+    color: rgb(51,137,215);
+}
+.top3>.bottom>.item>span{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    left: 14px;
+    top: 11px;
+}
+.bottom>.item>img{
+    width: 100%;
+}
+
+/******** top4 ********/
+.top4>.title>h1{
+    font-weight: 800;
+    text-indent: 44%;
+    line-height: 60px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    background: url(../img/tit-line.png) no-repeat 384px 30px;
+}
+.top4>.bottom{
+    /* background-color: rgb(236, 184, 184); */
+    width: 100%;
+    height: 500px;
+    /* 让item弹性居中铺满白色bottom */
+    display: flex;
+    justify-content: space-between;
+}
+.top4>.bottom{
+    /* 自动换行 */
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.top4>.bottom>.item{
+    position: relative;
+}
+.top4>.bottom>.item>img{
+    width: 210px;
+    height: 210px;
+}
+.top4>.bottom>.item:nth-of-type(1)>img{
+    width: 440px;
+    height: 210px;
+}
+.top4>.bottom>.item>span{
+    position:absolute;
+    top: 183px;
+    left: 7px;
+    color: white;
+    font-weight: 400;
+}
+
+
+/******top5******/
+.top5>.title>h1{
+    font-weight: 800;
+    text-indent: 44%;
+    line-height: 60px;
+    background-color: #fff;
+    background: url(../img/tit-line.png) no-repeat 384px 30px;
+}
+.top5>.title>h2{
+    color: rgb(80,80,80);
+    font-size: 18px;
+    font-weight: 400;
+    text-indent: 425px;
+    
+}
+.top5>.title>h3{
+    font-style: italic;
+    color: rgb(29,122,174);
+    font-size: 18px;
+    font-weight: 500;
+    text-indent: 526px;
+    margin: 15px 0;
+}
+.top5>.title>h3:hover{
+    color: rgb(26, 26, 26);
+}
+.top5>.bottom>.item{
+    float: left;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    /* 变圆 */
+    border-radius: 50%;
+    overflow: hidden;
+}
+.top5>.bottom>.item>img{
+    width: 100%;
+    height: 100%;
+}
+.top5>.bottom{
+    /* 靠紧密的图片分散居中 */
+    display:  flex;
+    justify-content: space-between;
+}
+.top5>.bottom>.item>.word{
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    /* 文字居中 */
+    text-align: center;
+    /* 文字与图片分离，需定位 */
+    position:absolute;
+    /* 定位结果要让word与item同底 */
+    bottom: 0px;
+
+}
+.top5>.bottom>.item>.word>.word1{
+    font-size: 13px;
+    font-weight: 550;
+    color: rgb(51,51,51);
+}
+.top5>.bottom>.item>.word>.word1:hover{
+    color: rgb(51,137,215);
+}
+.top5>.bottom>.item>.word>.word2{
+    font-size: 11px;
+    padding-left: 7px;
+    padding-top: 8px;
+    color: rgb(106,105,105);
+    font-weight: 550;
+    width: 250px;
+    height: 32px;
+    background: url(../img/strategy_pos.png) no-repeat 96px 5px;
+    /* 注意设置图片前：
+    1、父元素尺寸给出
+    2、父元素overhidden后 观察left是否
+    需要调动幅度大一些 */
+}
+
+
+/******* foot *******/
+.foot{
+    background-color: #282828;
+    width: 100%;
+    height: 350px;
+    /* 父元素overflow清除浮动 */
+    overflow: hidden;
+    margin-top: 80px;
+}
+.foot>.content
+{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 80%;
+    height: 56%;
+    /* background-color: pink; */
+    display:  flex;
+    justify-content: space-between;
+}
+.foot>.content>.footLeft
+{
+    float: left;
+    width: 340px;
+    height: 200px;
+    /* background-color: rgb(225, 243, 64); */
+    padding: 5px 10px;
+    border-right: 1px solid rgb(66,66,66);
+    box-sizing: border-box;
+    position: relative;
+}
+.foot>.content>.footCenter
+{
+    float: left;
+    width: 330px;
+    height: 200px;
+    /* background-color: rgb(178, 254, 207); */
+}
+.foot>.content>.footRight
+{
+    float: left;
+    width: 240px;
+    height: 200px;
+    /* background-color: rgb(170, 179, 250); */
+}
+.foot>.Bottom
+{
+    margin: 0 auto;
+    width: 80%;
+    height: 86px;
+    /* background-color: rgb(116, 180, 88); */
+}
+
+/* footLeft */
+
+.foot>.content>.footLeft>h1{
+    
+    color: white;
+    font-size: 25px;
+}
+.foot>.content>.footLeft>span{
+    color: white;
+    font-size: 14px;
+}
+.foot>.content>.footLeft>img{
+    position: absolute;
+    right: 30px;
+    top: 8px;
+}
+#qr{
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    font-size: 10px;
+}
+
+/* footCenter */
+.foot>.content>.footCenter
+{
+    border-right: 1px solid rgb(66,66,66);
+}
+.footCenter>h1{
+    color: rgb(51,137,215);
+    font-size: 21px;
+    margin-left: 17px;
+    margin-bottom: 6px;
+}
+.footCenter>.content{
+    /* 父宽是子三倍 子分三行 */
+    width: 330px;
+    height: 167px;
+    /* background-color: rgb(225, 149, 149); */
+}
+.footCenter>.content>ul>li{
+    /* 父宽是子三倍 子分三行 */
+    float: left;
+    /* width: 100px; */
+    width: 80px;
+    list-style: none;
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background: url(../img/sm_dot.png) no-repeat 0px 12px;
+}
+.footCenter>.content>ul>li>a:hover{
+    color: rgb(153,153,153);
+}
+.footCenter>.content>ul>li:nth-of-type(2){
+    width: 160px;
+}
+.footCenter>.content>ul>li:nth-of-type(12){
+    width: 160px;
+}
+
+/* footRight */
+.footRight>.title>h3{
+    color: rgb(51,137,215);
+    font-size: 21px;
+    margin-left: 17px;
+    margin-bottom: 6px;
+}
+.footRight>.content{
+    position: relative;
+}
+.footRight>.content>ul>li{
+    color: rgb(165,165,165);
+    width: 170px;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    padding-left: 60px;
+    background: url(../img/arrow_bottom.png) no-repeat 12px 8px;
+
+}
+.footRight>.content>img{
+    position: absolute;
+    left: 28px;
+    top: 1px;
+}
+
+/* bottom */
+.Bottom>.word{
+    height: 86px;
+    margin-top: 26px;
+    padding-top: 4px;
+    line-height: 86px;
+    text-align: center;
+    color: rgb(153,153,153);
+    border-top: 1px solid rgb(66,66,66);
+}
+.Bottom>.word>.ww{
+    color: white;
+}
+.Bottom>.word>.ww:hover{
+    color: rgb(153,153,153);
+}
+#footpic{
+    position: relative;
+}
+#footpic>img{
+    position: absolute;
+    top: 1px;
+    left: 26px;
+    width: 125px;
+    height: 25px;
+}
+
+
+
+
+
+
